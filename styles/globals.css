@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Background */
+body {
+  @apply bg-[#1A1A1A] text-white;
+}
+
+/* Header Styling */
+.header {
+  @apply flex justify-center items-center bg-black w-full h-[150px];
+}
+
+/* Create Task Button - Overlapping Effect */
+.create-task-container {
+  @apply flex justify-center relative;
+  @apply -mt-6;
+}
+
+.create-task-btn {
+  @apply flex justify-center items-center gap-2 bg-[#1E6F9F] text-white 
+         font-bold rounded-lg w-[736px] h-[52px] text-lg shadow-md transition-all;
+}
+
+.create-task-btn:hover {
+  @apply bg-[#155E75] shadow-lg;
+}
+
+/* Task Summary */
+.task-summary {
+  @apply flex justify-between w-full max-w-[736px] mx-auto text-white text-[14px] 
+         font-bold mt-6 border-b border-gray-600 pb-2;
+}
+
+/* Tasks and Completed Section */
+.task-counter {
+  @apply flex items-center text-[#4EA8DE] px-3 py-1 rounded-lg text-sm;
+}
+
+.task-completed {
+  @apply flex items-center text-[#8284FA] px-3 py-1 rounded-lg text-sm;
+}
+
+/* Task Count Number Styling */
+.counter {
+  @apply ml-2 bg-gray-700 text-white px-2 py-0.5 rounded-full text-xs;
+}
+
+/* Empty State */
+.empty-state {
+  @apply flex flex-col items-center justify-center mt-16 text-gray-400;
+}
+
+.empty-text {
+  @apply text-lg font-semibold mt-4;
+}
+
+.empty-subtext {
+  @apply text-sm;
+}
+
+/* Back Button Styling */
+.back-button {
+  @apply absolute top-6 left-6 w-8 h-8 flex items-center justify-center;
+}
+
+/* Custom Radio (Checkbox) Button */
+.custom-radio {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4EA8DE; /* Light blue border */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+.custom-radio:checked {
+  background-color: #5E60CE; /* Purple background */
+  border-color: #5E60CE;
+}
+
+.custom-radio:checked::before {
+  content: "✓";  /* Standard checkmark */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+/* ========== Updated Font Size (14px) ========== */
+/* Apply 14px text size globally to relevant sections */
+label,
+button,
+input,
+.task-summary,
+.task-counter,
+.task-completed {
+  font-size: 14px;
+}
